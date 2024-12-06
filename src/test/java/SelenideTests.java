@@ -182,4 +182,6 @@ public class SelenideTests extends BaseTest {
         submitResultElements.shouldHave(texts(fullName, email, currentAddress, permanentAddress));
 
     }
+
+    //This comment is not informative and not precise
 }
