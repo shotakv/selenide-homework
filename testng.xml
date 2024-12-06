@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite" parallel="tests" thread-count="3">
+
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="SelenideTests">
+                <methods>
+                    <exclude name="collectionsTest" />  <!--so it only runs on FIREFOX-->
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    <test name="FirefoxTests">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="SelenideTests">
+            </class>
+
+        </classes>
+    </test>
+
+
+
+
+</suite>
