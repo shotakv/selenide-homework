@@ -46,7 +46,11 @@ public class Constants {
             PURPLE_RGBA_COLOR_TEXT = "rgba(40, 46, 137, 0.75)",
             GIT_POCKET_GUIDE_TEXT = "Git Pocket Guide",
             DESIRED_QUANTITY_AMOUNT = "2",
-            DEFAULT_NUMBER_INITIAL_TEXT = "592";
+            DEFAULT_NUMBER_INITIAL_TEXT = "592",
+            JAVASCRIPT_TEXT = "Javascript",
+            O_REILLY_TEXT = "O'Reilly Media",
+            UI_VUE_DEMO_TEXT = "UI for Vue Demos";
+
 
 
 }

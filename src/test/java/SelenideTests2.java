@@ -31,7 +31,7 @@ public class SelenideTests2 extends BaseTest {
         SelenideElement kendoBoxElement = $x(Constants.WEB_SECTION_ELEMENT_XPATH+"//img");
         kendoBoxElement.hover();
         SelenideElement kendoBoxOverlayContentElement = $x(Constants.WEB_SECTION_ELEMENT_XPATH+"//div[@class='LinkContainer']");
-        kendoBoxOverlayContentElement.shouldHave(Condition.text("UI for Vue Demos"));
+        kendoBoxOverlayContentElement.shouldHave(Condition.text(Constants.UI_VUE_DEMO_TEXT));
 
 
         SelenideElement desktopSectionButton = $x("//a[@href='#desktop']");
@@ -220,7 +220,7 @@ public class SelenideTests2 extends BaseTest {
     public void chainedLocatorsTest() {
         open(Constants.DEMO_QA_BOOKS_URL);
         getWebDriver().manage().window().maximize();
-        ElementsCollection oReillyBooks = $(".rt-tbody").findAll(".rt-tr-group").filter(Condition.text("O'Reilly Media")).filter(Condition.text("Javascript"));
+        ElementsCollection oReillyBooks = $(".rt-tbody").$$(".rt-tr-group").filter(Condition.text(Constants.O_REILLY_TEXT)).filter(Condition.text(Constants.JAVASCRIPT_TEXT));
         oReillyBooks.forEach(book -> {
             Assert.assertFalse(book.find("img").getAttribute("src").isEmpty());
         });
@@ -230,7 +230,7 @@ public class SelenideTests2 extends BaseTest {
     public void softAssertTest() {
         open(Constants.DEMO_QA_BOOKS_URL);
         getWebDriver().manage().window().maximize();
-        ElementsCollection oReillyBooks = $(".rt-tbody").findAll(".rt-tr-group").filter(Condition.text("O'Reilly Media")).filter(Condition.text("Javascript"));
+        ElementsCollection oReillyBooks = $(".rt-tbody").findAll(".rt-tr-group").filter(Condition.text(Constants.O_REILLY_TEXT)).filter(Condition.text(Constants.JAVASCRIPT_TEXT));
         sfa.assertEquals(oReillyBooks.size(), 10);
         ElementsCollection booksList = $(".rt-tbody").findAll(".rt-tr-group");
         String firstBookName = booksList.first().find("a").getText();
