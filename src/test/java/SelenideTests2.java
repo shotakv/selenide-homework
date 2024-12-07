@@ -239,5 +239,5 @@ public class SelenideTests2 extends BaseTest {
         sfa.assertAll();
     }
 
-    //This comment does not contain any useful information
+    //This comment is informative
 }

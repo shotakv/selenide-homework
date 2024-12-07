@@ -187,5 +187,5 @@ public class SelenideTests extends BaseTest {
 
     //This comment is precise and understandable
 
-    //This comment does not contain any useful information
+    //This comment is informative
 }
