@@ -40,4 +40,13 @@ public class Helper {
         }
         return -1;
     }
+
+    public static Double discountCalculator(Double price,Double discount){
+        return ((price * (100-discount))/100);
+    }
+
+    public static Double convertIntoDouble(String price){
+        return Double.parseDouble(price.replace(",","").replace("$","").replace("-","").replace("%","").replace("US","").replace(" ",""));
+    }
+
 }
