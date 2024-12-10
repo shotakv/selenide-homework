@@ -138,7 +138,7 @@ public class SelenideTests extends BaseTest {
 
         SelenideElement firstCheckBox = $x("//input[following-sibling::text()=' checkbox 1']");
         firstCheckBox.setSelected(true);
-        firstCheckBox.shouldBe(checked);
+        firstCheckBox.shouldNotBe(checked); // changed so it fails on purpose
         SelenideElement secondCheckBox = $x("//input[normalize-space(following-sibling::text())='checkbox 2']");
 
         firstCheckBox.shouldHave(attribute("type", "checkbox"));
