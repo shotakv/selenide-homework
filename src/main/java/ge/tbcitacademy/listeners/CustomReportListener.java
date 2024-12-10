@@ -19,5 +19,5 @@ public class CustomReportListener implements IReporter {
             });
         }
     }
-    //this comment means nothing
+    //Informative Comment
 }
