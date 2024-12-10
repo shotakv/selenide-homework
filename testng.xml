@@ -7,10 +7,7 @@
     <test name="ChromeTest">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="SelenideTests">
-                <methods>
-                    <exclude name="collectionsTest" />  <!--so it only runs on FIREFOX-->
-                </methods>
+            <class name="SelenideTests2">
             </class>
 
         </classes>
@@ -18,7 +15,7 @@
     <test name="FirefoxTests">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name="SelenideTests">
+            <class name="SelenideTests2">
             </class>
 
         </classes>

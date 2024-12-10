@@ -13,6 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -20,6 +21,8 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 public class BaseTest {
     public JavascriptExecutor js;
     public Faker faker;
+    public SoftAssert sfa;
+
 
 
     @Parameters("browser")
@@ -37,6 +40,7 @@ public class BaseTest {
             throw new Exception(Constants.BROWSER_NOT_SUPPORTED_TEXT);
         }
         Configuration.timeout = 10000;
+        sfa = new SoftAssert();
         faker = new Faker();
     }
 

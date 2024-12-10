@@ -1,3 +1,5 @@
+package Homework1;
+
 import ge.tbcitacademy.data.Constants;
 import ge.tbcitacademy.util.BaseTest;
 import ge.tbcitacademy.util.Helper;
@@ -184,4 +186,6 @@ public class SelenideTests extends BaseTest {
     }
 
     //This comment is precise and understandable
+
+    //This comment is informative
 }
