@@ -49,7 +49,26 @@ public class Constants {
             DEFAULT_NUMBER_INITIAL_TEXT = "592",
             JAVASCRIPT_TEXT = "Javascript",
             O_REILLY_TEXT = "O'Reilly Media",
-            UI_VUE_DEMO_TEXT = "UI for Vue Demos";
+            UI_VUE_DEMO_TEXT = "UI for Vue Demos",
+            SUITE_TOTAL_TIME = "Total time needed to execute Suite ",
+            MINUTES = " Minutes ",
+            SECONDS = " Seconds",
+            SUITE = "Suite ",
+            ENDED_AT = " ended at: ",
+            TEST_TOTAL_TIME = "Total time needed to execute Test ",
+            STARTED_AT = " started at: ",
+            TEST = "Test ",
+            SEMICOLON = ": ",
+            METHOD = "Method ",
+            TEST_TOTAL_METHOD = "Total time needed to execute Test ",
+            MS = " ms",
+            FAILURE_REASON = "Failure reason: ",
+            COMMA = ", ",
+            GENERATING_REPORT = "Generating Report",
+            SAVED_SCREENSHOT = "Screenshot saved for test: ",
+            SCREENSHOT_PATH = "screenshots/",
+            PNG = ".png",
+            FAILURE_TEXT = "FAILURE";
 
 
 

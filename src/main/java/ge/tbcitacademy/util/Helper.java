@@ -9,7 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,6 +49,17 @@ public class Helper {
 
     public static Double convertIntoDouble(String price){
         return Double.parseDouble(price.replace(",","").replace("$","").replace("-","").replace("%","").replace("US","").replace(" ",""));
+    }
+
+    public static void logMethodEnd(ITestResult result, String status) {
+        LocalDateTime methodEndTime = LocalDateTime.now();
+        System.out.println(Constants.METHOD + result.getMethod().getMethodName() + Constants.ENDED_AT + methodEndTime);
+        long executionTime = result.getEndMillis() - result.getStartMillis();
+        if (status.isEmpty()) {
+            System.out.println(Constants.TEST_TOTAL_METHOD + result.getMethod().getMethodName() +Constants.SEMICOLON + executionTime + Constants.MS);
+        } else {
+            System.out.println(Constants.TEST_TOTAL_METHOD + result.getMethod().getMethodName() + Constants.SEMICOLON + executionTime + Constants.MS + " (" + status + ")");
+        }
     }
 
 }
