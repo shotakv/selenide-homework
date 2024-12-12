@@ -61,5 +61,5 @@ public class Helper {
             System.out.println(Constants.TEST_TOTAL_METHOD + result.getMethod().getMethodName() + Constants.SEMICOLON + executionTime + Constants.MS + " (" + status + ")");
         }
     }
-    //not informative comment
+    //informative comment
 }
