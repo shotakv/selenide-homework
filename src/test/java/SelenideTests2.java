@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class SelenideTests2 extends BaseTest {
-    @Test
+    @Test(groups = Constants.SELENIDE_2_GROUP)
     public void validateDemosDesign() {
         open(Constants.TELERIK_URL);
         getWebDriver().manage().window().maximize();
@@ -66,7 +66,7 @@ public class SelenideTests2 extends BaseTest {
 
     }
 
-    @Test
+    @Test(groups = Constants.SELENIDE_2_GROUP)
     public void validateOrderMechanics() {
         open(Constants.TELERIK_URL);
         getWebDriver().manage().window().maximize();
@@ -216,7 +216,7 @@ public class SelenideTests2 extends BaseTest {
     }
 
 
-    @Test
+    @Test(groups = Constants.SELENIDE_2_GROUP)
     public void chainedLocatorsTest() {
         open(Constants.DEMO_QA_BOOKS_URL);
         getWebDriver().manage().window().maximize();
@@ -226,7 +226,7 @@ public class SelenideTests2 extends BaseTest {
         });
     }
 
-    @Test
+    @Test(groups = Constants.SELENIDE_2_GROUP)
     public void softAssertTest() {
         open(Constants.DEMO_QA_BOOKS_URL);
         getWebDriver().manage().window().maximize();

@@ -1,43 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SelenideTestSuite" parallel="tests" thread-count="3">
 
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<suite name="SelenideTestsSuite" parallel="tests" thread-count="3">
-
-    <listeners>
-        <listener class-name="ge.tbcitacademy.listeners.CustomSuiteListener" />
-        <listener class-name="ge.tbcitacademy.listeners.CustomTestListener" />
-        <listener class-name="ge.tbcitacademy.listeners.CustomReportListener" />
-    </listeners>
-
-
-    <test name="ChromeTest">
-        <parameter name="browser" value="chrome" />
+      <!-- First Test Tag-->
+    <test name="SelenideTests">
+        <groups>
+            <define name="MainSelenide">
+                <include name="Selenide 1"/>
+                <include name="Selenide 2"/>
+            </define>
+            <run>
+                <include name="MainSelenide"/>
+            </run>
+        </groups>
         <classes>
-            <class name="Homework1.SelenideTests">
-            </class>
-
-        </classes>
-    </test>
-    <test name="FirefoxTests">
-        <parameter name="browser" value="firefox" />
-        <classes>
-            <class name="Homework1.SelenideTests">
-            </class>
-
+            <class name="Homework1.SelenideTests"/>
+            <class name="SelenideTests2"/>
         </classes>
     </test>
 
-    <test name="EdgeTests">
-        <parameter name="browser" value="edge" />
-        <classes>
-            <class name="Homework1.SelenideTests">
-            </class>
-
-        </classes>
+    <!-- Second Test Tag-->
+    <test name="SelenideFrontEndTests">
+    <groups>
+        <run>
+            <include name=".*FrontEnd"/>
+        </run>
+    </groups>
+    <classes>
+        <class name="Homework1.SelenideTests"/>
+    </classes>
     </test>
-
-
-
 
 </suite>

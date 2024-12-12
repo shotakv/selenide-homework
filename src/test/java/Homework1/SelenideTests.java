@@ -1,10 +1,15 @@
 package Homework1;
 
 import ge.tbcitacademy.data.Constants;
+import ge.tbcitacademy.retry.RetryAnalyzer;
+import ge.tbcitacademy.retry.RetryCount;
 import ge.tbcitacademy.util.BaseTest;
 import ge.tbcitacademy.util.Helper;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.codeborne.selenide.*;
+
+import java.util.Random;
 
 import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Condition.*;
@@ -12,7 +17,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class SelenideTests extends BaseTest {
-    @Test
+    @Test(groups = Constants.SELENIDE_1_GROUP)
     public void validateBundleOffers() {
         open(Constants.TELERIK_URL);
         getWebDriver().manage().window().maximize();
@@ -86,7 +91,7 @@ public class SelenideTests extends BaseTest {
     }
 
 
-    @Test
+    @Test(groups = Constants.SELENIDE_1_GROUP)
     public void validateIndividualOffers() {
         open(Constants.TELERIK_URL);
         getWebDriver().manage().window().maximize();
@@ -131,7 +136,7 @@ public class SelenideTests extends BaseTest {
     }
 
 
-    @Test
+    @Test(groups = {Constants.SELENIDE_1_GROUP, Constants.CHECKBOXES_FRONTEND_GROUP})
     public void checkBoxTest() {
         open(Constants.HEROKU_CHECKBOXES_URL);
         getWebDriver().manage().window().maximize();
@@ -146,7 +151,7 @@ public class SelenideTests extends BaseTest {
 
     }
 
-    @Test
+    @Test(groups = {Constants.SELENIDE_1_GROUP,Constants.DROPDOWN_FRONTEND_GROUP},priority = 0)
     public void dropDownTest() {
         open(Constants.HEROKU_DROPDOWN_URL);
         getWebDriver().manage().window().maximize();
@@ -156,7 +161,23 @@ public class SelenideTests extends BaseTest {
         dropDownElement.getSelectedOption().shouldHave(text(Constants.OPTION_2_TEXT));
     }
 
-    @Test
+    //adding fake dropDownTests just to change the order of execution in dropdown group
+    @Test(groups = Constants.DROPDOWN_FRONTEND_GROUP, priority = 2, retryAnalyzer = RetryAnalyzer.class)
+    @RetryCount()
+    public void justAnotherDropdownTest() {
+        System.out.println(Constants.FAKE_DROPDOWN_TEST_HAS_COMPLETED);
+        Assert.fail();
+    }
+
+    @RetryCount(count = 3)
+    @Test(groups = Constants.DROPDOWN_FRONTEND_GROUP, priority = 1, retryAnalyzer = RetryAnalyzer.class)
+    public void tempDropDownTest() {
+        int randInt = new Random().nextInt(5);
+        System.out.println(Constants.DROPDOWN_TEST_HAS_COMPLETED);
+        Assert.assertTrue(randInt > 3);
+    }
+
+    @Test(groups = Constants.SELENIDE_1_GROUP)
     public void collectionsTest() {
         open(Constants.DEMO_QA_TEXTBOX_URL);
         getWebDriver().manage().window().maximize();
