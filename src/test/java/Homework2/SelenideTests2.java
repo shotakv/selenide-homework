@@ -1,3 +1,5 @@
+package Homework2;
+
 import ge.tbcitacademy.util.BaseTest;
 import ge.tbcitacademy.util.Helper;
 import org.openqa.selenium.Keys;
