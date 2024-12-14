@@ -68,7 +68,13 @@ public class Constants {
             SAVED_SCREENSHOT = "Screenshot saved for test: ",
             SCREENSHOT_PATH = "screenshots/",
             PNG = ".png",
-            FAILURE_TEXT = "FAILURE";
+            FAILURE_TEXT = "FAILURE",
+            SELENIDE_1_GROUP = "Selenide 1",
+            SELENIDE_2_GROUP = "Selenide 2",
+            CHECKBOXES_FRONTEND_GROUP = "CheckBoxes-FrontEnd",
+            DROPDOWN_FRONTEND_GROUP = "dropDown-FrontEnd",
+            DROPDOWN_TEST_HAS_COMPLETED = "Dropdown test has already been run",
+            FAKE_DROPDOWN_TEST_HAS_COMPLETED = "IMPOSTOR Dropdown test has already been run";
 
 
 
