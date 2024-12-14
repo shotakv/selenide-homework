@@ -12,7 +12,7 @@
     <test name="ChromeTest">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="SelenideTests2">
+            <class name="Homework2.SelenideTests2">
             </class>
 
         </classes>
@@ -20,7 +20,7 @@
     <test name="FirefoxTests">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name="SelenideTests2">
+            <class name="Homework2.SelenideTests2">
             </class>
 
         </classes>

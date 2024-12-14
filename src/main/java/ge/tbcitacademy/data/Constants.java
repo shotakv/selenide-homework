@@ -6,7 +6,9 @@ public class Constants {
             HEROKU_CHECKBOXES_URL = "http://the-internet.herokuapp.com/checkboxes",
             HEROKU_DROPDOWN_URL = "http://the-internet.herokuapp.com/dropdown",
             DEMO_QA_TEXTBOX_URL = "https://demoqa.com/text-box",
-            DEMO_QA_BOOKS_URL = "https://demoqa.com/books";
+            DEMO_QA_BOOKS_URL = "https://demoqa.com/books",
+            SWOOP_MAIN_PAGE_URL = "https://swoop.ge",
+            DEMO_QA_PRACTICE_FORM = "https://demoqa.com/automation-practice-form";
 
     //Locators
     public static final String WEB_SECTION_ELEMENT_XPATH = "//div[@id='ContentPlaceholder1_C329_Col00']",
@@ -74,7 +76,16 @@ public class Constants {
             CHECKBOXES_FRONTEND_GROUP = "CheckBoxes-FrontEnd",
             DROPDOWN_FRONTEND_GROUP = "dropDown-FrontEnd",
             DROPDOWN_TEST_HAS_COMPLETED = "Dropdown test has already been run",
-            FAKE_DROPDOWN_TEST_HAS_COMPLETED = "IMPOSTOR Dropdown test has already been run";
+            FAKE_DROPDOWN_TEST_HAS_COMPLETED = "IMPOSTOR Dropdown test has already been run",
+            PRICE_DESCENDING_TEXT = "ფასით კლებადი",
+            PRICE_ASCENDING_TEXT = "ფასით ზრდადი",
+            HOLIDAY_CATEGORY = "დასვენება",
+            FUN_CATEGORY = "გართობა",
+            FOOD_CATEGORY = "კვება",
+            PRICE_RANGE_TEXT = "200₾ - 300₾",
+            PRICE_RANGE_FROM_TEXT = "დან",
+            PRICE_RANGE_TO_TEXT = "მდე",
+            VALUES= "Values";
 
 
 
