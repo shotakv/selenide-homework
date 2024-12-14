@@ -19,7 +19,7 @@ public class DataSupplier {
         };
     }
 
-    @DataProvider(name = "studentsData")
+    @DataProvider
     public Object[][] studentsData(){
         return new Object[][]{
                 {"Bruce","Wayne","Male","5920400700"},
